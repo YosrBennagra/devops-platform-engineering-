@@ -1,0 +1,48 @@
+# Provider-neutral educational model.
+# Deliberately not installed as a live workflow.
+pipeline:
+  triggers:
+    - pull_request
+    - main_branch
+
+  stages:
+    - name: fast-verification
+      jobs:
+        - compile
+        - lint
+        - unit-tests
+
+    - name: build-once
+      only: main_branch
+      outputs:
+        - immutable_image_digest
+        - source_commit
+        - sbom_reference
+
+    - name: verify-artifact
+      inputs:
+        - immutable_image_digest
+      jobs:
+        - integration-tests
+        - policy-checks
+        - provenance-check
+
+    - name: publish
+      outputs:
+        - registry_digest
+
+    - name: deploy-non-production
+      artifact: registry_digest
+      jobs:
+        - update_desired_state
+        - wait_for_rollout
+        - runtime_verification
+
+    - name: promote-production
+      artifact: same_registry_digest
+      gate:
+        type: policy_or_approval
+      jobs:
+        - update_production_desired_state
+        - observe_rollout
+        - rollback_on_defined_failure
