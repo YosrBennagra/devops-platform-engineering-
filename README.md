@@ -1,6 +1,6 @@
 # DevOps & Platform Engineering — 0 → Expert
 
-> **Cheat sheet:** [CHEAT-SHEET.md](CHEAT-SHEET.md) (dense one-to-two-page revision sheet to print and keep on the wall)
+> **Cheat sheet:** [CHEAT-SHEET.md](CHEAT-SHEET.md) (dense one-to-two-page revision sheet to print and keep on the wall) · **Hub:** [software-engineer-roadmap](https://github.com/YosrBennagra/software-engineer-roadmap) · **Full-stack roadmap:** [fullstack-engineer-roadmap](https://github.com/YosrBennagra/fullstack-engineer-roadmap)
 
 This repository is the **DevOps / platform-engineering owner** in the interconnected software-engineering knowledge system. The master index is [software-engineer-roadmap](https://github.com/YosrBennagra/software-engineer-roadmap).
 
