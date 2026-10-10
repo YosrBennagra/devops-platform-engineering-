@@ -1,5 +1,7 @@
 # DevOps & Platform Engineering — 0 → Expert
 
+> **Cheat sheet:** [CHEAT-SHEET.md](CHEAT-SHEET.md) (dense one-to-two-page revision sheet to print and keep on the wall)
+
 This repository is the **DevOps / platform-engineering owner** in the interconnected software-engineering knowledge system. The master index is [software-engineer-roadmap](https://github.com/YosrBennagra/software-engineer-roadmap).
 
 The purpose is to learn how software moves safely from source code to production and how platforms make that path repeatable. The repository is intentionally production-oriented: mechanisms, failure modes, commands, diagrams, trade-offs and senior reasoning rather than tool-list memorization.
